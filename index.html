@@ -19,10 +19,10 @@
       <main class="container">
         <section id="album-container">
           <div class="card" v-for="music in musics">
-            <img src="images/demo.jpg" alt="New Jersey" />
-            <h2 class="title">NEW JERSEY</h2>
-            <address class="author">Bon Jovi</address>
-            <time datetime="1988" class="year">1988</time>
+            <img :src="music.poster" :alt="music.title" />
+            <h2 class="title">{{music.title}}</h2>
+            <address class="author">{{music.author}}</address>
+            <time :datetime="music.year" class="year">{{music.year}}</time>
           </div>
         </section>
       </main>
