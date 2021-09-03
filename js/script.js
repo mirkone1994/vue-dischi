@@ -7,6 +7,13 @@ const app = new Vue({
   data: {
     musics: [],
   },
+  computed: {
+    sortedMusics(){
+      return this.musics.sort((a, b) => {
+        return a.year - b.year;
+      });
+    }
+  },
   methods: {},
   created(){
     axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((res) => {

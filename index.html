@@ -18,7 +18,7 @@
       </header>
       <main class="container">
         <section id="album-container">
-          <div class="card" v-for="music in musics">
+          <div class="card" v-for="music in sortedMusics">
             <img :src="music.poster" :alt="music.title" />
             <h2 class="title">{{music.title}}</h2>
             <address class="author">{{music.author}}</address>
