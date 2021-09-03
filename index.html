@@ -14,11 +14,15 @@
       <header>
         <div class="container">
           <img src="images/logo.png" />
+          <select v-model="selectedGenre">
+            <option>All</option>
+            <option v-for="genre in genresList">{{ genre }}</option>
+          </select>
         </div>
       </header>
       <main class="container">
         <section id="album-container">
-          <div class="card" v-for="music in sortedMusics">
+          <div class="card" v-for="music in filteredMusics">
             <img :src="music.poster" :alt="music.title" />
             <h2 class="title">{{music.title}}</h2>
             <address class="author">{{music.author}}</address>
@@ -27,15 +31,6 @@
         </section>
       </main>
     </div>
-
-
-    <select name="" id="">
-      <option>All</option>
-      <option>Pop</option>
-      <option>Pop</option>
-    </select>
-
-
     <script src="js/script.js"></script>
   </body>
 </html>
